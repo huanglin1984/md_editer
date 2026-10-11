@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MarkdownEditor</class>
+ <widget class="QMainWindow" name="MarkdownEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Markdown Viewer</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="toolbar_widget">
+      <layout class="QHBoxLayout" name="toolbar_layout">
+       <item>
+        <widget class="QPushButton" name="open_btn">
+         <property name="text">
+          <string>📂 打开</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="save_btn">
+         <property name="text">
+          <string>💾 保存</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="sep_1">
+         <property name="frameShape">
+          <enum>QFrame::VLine</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="mode_btn">
+         <property name="text">
+          <string>✏️ 编辑模式</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="sep_2">
+         <property name="frameShape">
+          <enum>QFrame::VLine</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="file_label">
+         <property name="text">
+          <string>未打开文件</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="toolbar_spacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="expandingDirections">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QFrame" name="sep_3">
+         <property name="frameShape">
+          <enum>QFrame::VLine</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="zoom_label_icon">
+         <property name="text">
+          <string>🔍</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSlider" name="zoom_slider">
+         <property name="maximum">
+          <number>200</number>
+         </property>
+         <property name="sliderPosition">
+          <number>100</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="zoom_label">
+         <property name="text">
+          <string>100%</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="mode_container">
+      <layout class="QVBoxLayout" name="mode_layout">
+       <item>
+        <widget class="QWidget" name="read_widget">
+         <layout class="QVBoxLayout" name="read_layout">
+          <item>
+           <widget class="QTextEdit" name="read_preview">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="edit_widget">
+         <layout class="QVBoxLayout" name="edit_layout">
+          <item>
+           <widget class="QSplitter" name="splitter">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <widget class="QTextEdit" name="editor"/>
+            <widget class="QTextEdit" name="edit_preview">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
