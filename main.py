@@ -113,7 +113,7 @@ if os.name == 'nt':
 
 # ==================== 项目模块导入 ====================
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from md_editor import main  # noqa: E402
+from src import main  # noqa: E402
 
 
 if __name__ == '__main__':

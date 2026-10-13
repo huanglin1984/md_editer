@@ -14,6 +14,7 @@ def resource_path(*parts: str) -> str:
         # 打包后:exe 同级目录
         base = os.path.dirname(sys.executable)
     else:
-        # 开发模式:脚本所在目录
-        base = os.path.dirname(os.path.abspath(__file__))
+        # 开发模式:utils/ 的上级 = 项目根(支持 src/main_window.py 等子模块调用)
+        here = os.path.dirname(os.path.abspath(__file__))
+        base = os.path.dirname(here)
     return os.path.join(base, *parts)

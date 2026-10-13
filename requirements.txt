@@ -1,1 +1,9 @@
 PyQt5>=5.15.0
+markdown-it-py>=3.0.0
+mdit-py-plugins>=0.4.0
+linkify-it-py>=2.0.0
+Pygments>=2.15.0
+
+# 外部(可选):LaTeX 数学公式渲染需要本机装 TeX Live 或 MiKTeX
+# Windows 推荐 MiKTeX (按需安装约 200-500 MB);texlive full 约 5 GB
+# 未安装时公式自动降级为源码占位显示,不影响其他功能
